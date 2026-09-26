@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Teachers - EduManage</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo">
+        🏫 EduManage
+    </div>
+
+    <nav>
+        <a href="/">Dashboard</a>
+        <a href="/students">Students</a>
+        <a href="/teachers">Teachers</a>
+        <a href="/courses">Courses</a>
+        <a href="/contact">Contact</a>
+    </nav>
+
+</header>
+
+
+<section class="page">
+
+    <h1>Our Teachers</h1>
+
+    <p class="subtitle">
+        Meet our experienced teaching staff.
+    </p>
+
+
+    <div class="teacher-grid">
+
+        {% for teacher in teachers %}
+
+        <div class="teacher-card">
+
+            <div class="teacher-icon">
+                👩‍🏫
+            </div>
+
+            <h2>{{ teacher.name }}</h2>
+
+            <p>
+                <strong>Subject:</strong>
+                {{ teacher.subject }}
+            </p>
+
+            <p>
+                <strong>Experience:</strong>
+                {{ teacher.experience }}
+            </p>
+
+        </div>
+
+        {% endfor %}
+
+    </div>
+
+</section>
+
+
+<footer>
+
+    <p>© 2026 EduManage School Management System</p>
+
+</footer>
+
+</body>
+</html>
