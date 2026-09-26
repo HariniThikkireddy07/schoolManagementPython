@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Students - EduManage</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo">
+        🏫 EduManage
+    </div>
+
+    <nav>
+        <a href="/">Dashboard</a>
+        <a href="/students">Students</a>
+        <a href="/teachers">Teachers</a>
+        <a href="/courses">Courses</a>
+        <a href="/contact">Contact</a>
+    </nav>
+
+</header>
+
+
+<section class="page">
+
+    <h1>Student Management</h1>
+
+    <p class="subtitle">
+        List of students currently enrolled in the school.
+    </p>
+
+
+    <div class="table-container">
+
+        <table>
+
+            <thead>
+
+                <tr>
+                    <th>ID</th>
+                    <th>Student Name</th>
+                    <th>Class</th>
+                    <th>Section</th>
+                    <th>Marks</th>
+                    <th>Status</th>
+                </tr>
+
+            </thead>
+
+
+            <tbody>
+
+                {% for student in students %}
+
+                <tr>
+
+                    <td>{{ student.id }}</td>
+
+                    <td>
+                        <strong>{{ student.name }}</strong>
+                    </td>
+
+                    <td>{{ student.class }}</td>
+
+                    <td>{{ student.section }}</td>
+
+                    <td>{{ student.marks }}%</td>
+
+                    <td>
+
+                        {% if student.marks >= 80 %}
+
+                        <span class="status active">
+                            Excellent
+                        </span>
+
+                        {% else %}
+
+                        <span class="status pending">
+                            Good
+                        </span>
+
+                        {% endif %}
+
+                    </td>
+
+                </tr>
+
+                {% endfor %}
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</section>
+
+
+<footer>
+
+    <p>© 2026 EduManage School Management System</p>
+
+</footer>
+
+</body>
+</html>
