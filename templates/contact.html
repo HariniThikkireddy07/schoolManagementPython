@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Contact - EduManage</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo">
+        🏫 EduManage
+    </div>
+
+    <nav>
+        <a href="/">Dashboard</a>
+        <a href="/students">Students</a>
+        <a href="/teachers">Teachers</a>
+        <a href="/courses">Courses</a>
+        <a href="/contact">Contact</a>
+    </nav>
+
+</header>
+
+
+<section class="page">
+
+    <h1>Contact Us</h1>
+
+    <p class="subtitle">
+        Get in touch with EduManage School.
+    </p>
+
+
+    <div class="contact-container">
+
+        <div class="contact-info">
+
+            <h2>School Information</h2>
+
+            <p>📍 25 Education Road, Vijayawada</p>
+
+            <p>📞 +91 98765 43210</p>
+
+            <p>✉️ info@edumanage.com</p>
+
+            <p>🕐 Monday - Friday: 9:00 AM - 4:00 PM</p>
+
+        </div>
+
+
+        <div class="contact-form">
+
+            <h2>Send a Message</h2>
+
+            <form>
+
+                <input
+                    type="text"
+                    placeholder="Your Name"
+                    required
+                >
+
+                <input
+                    type="email"
+                    placeholder="Your Email"
+                    required
+                >
+
+                <textarea
+                    placeholder="Your Message"
+                    rows="5"
+                    required
+                ></textarea>
+
+                <button type="submit">
+                    Send Message
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<footer>
+
+    <p>© 2026 EduManage School Management System</p>
+
+</footer>
+
+</body>
+</html>
