@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>School Management System</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<header>
+    <div class="logo">
+        🏫 EduManage
+    </div>
+
+    <nav>
+        <a href="/">Dashboard</a>
+        <a href="/students">Students</a>
+        <a href="/teachers">Teachers</a>
+        <a href="/courses">Courses</a>
+        <a href="/contact">Contact</a>
+    </nav>
+</header>
+
+
+<section class="hero">
+
+    <div>
+        <h1>School Management System</h1>
+
+        <p>
+            Manage students, teachers and courses
+            from one simple platform.
+        </p>
+
+        <a href="/students" class="button">
+            View Students
+        </a>
+    </div>
+
+</section>
+
+
+<section class="dashboard">
+
+    <h2>School Dashboard</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <div class="icon">👨‍🎓</div>
+            <h3>1,250</h3>
+            <p>Total Students</p>
+        </div>
+
+
+        <div class="card">
+            <div class="icon">👩‍🏫</div>
+            <h3>85</h3>
+            <p>Total Teachers</p>
+        </div>
+
+
+        <div class="card">
+            <div class="icon">📚</div>
+            <h3>24</h3>
+            <p>Total Courses</p>
+        </div>
+
+
+        <div class="card">
+            <div class="icon">🏫</div>
+            <h3>32</h3>
+            <p>Classrooms</p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="about">
+
+    <h2>Welcome to EduManage</h2>
+
+    <p>
+        EduManage is a simple school management platform designed
+        to help schools organize student information, teachers,
+        courses and academic activities.
+    </p>
+
+</section>
+
+
+<footer>
+
+    <p>
+        © 2026 EduManage School Management System
+    </p>
+
+    <p>
+        Education • Management • Excellence
+    </p>
+
+</footer>
+
+</body>
+</html>
